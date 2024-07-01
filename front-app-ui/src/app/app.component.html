@@ -1,0 +1,8 @@
+<div *ngFor="let product of products" class="product">
+  <h2>{{ product.name }}</h2>
+  <p>{{ product.description }}</p>
+  <p *ngIf="product.category" class="category">Category: {{ product.category.name }} - {{ product.category.description }}</p>
+  <ul *ngIf="product.tags">
+    <li *ngFor="let tag of product.tags">{{ tag }}</li>
+  </ul>
+</div>
